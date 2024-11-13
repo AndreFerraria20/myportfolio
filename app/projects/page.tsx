@@ -5,7 +5,7 @@ import { ProjectGrid } from "@/components/ui/projectGrid";
 export default function MyPage() {
   const content = (
     <><div className="w-full items-center flex flex-col">
-      <p className="text-md  text-slate-200 mb-8 md:text-xl text-center">Currently just a placeholder(nohing to see here yet):</p>
+      <p className="text-md  text-slate-200 mb-8 md:text-xl text-center">This section is currently under construction. Check back soon for a showcase of my projects.</p>
     </div>
       <ProjectGrid /></>
   )

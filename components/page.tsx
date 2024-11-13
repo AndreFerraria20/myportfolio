@@ -86,8 +86,8 @@ export function Page() {
             <div className="text-neutral-400 max-w-lg mx-auto my-2 text-sm text-center relative z-10">
               <p className="text-xl text-muted-foreground mb-2"></p>
               <br />
-              Hi. Nice to meet you. Feel free to take a look around!
-              A passionate developer, always learning, with attention to detail, starting freelancing.
+              Hi, I'm André. A passionate developer, always learning, with attention to detail, starting freelancing.
+              Take a look around and let's see if we can work together.
 
               <div className="flex space-x-4 items-center justify-center pt-4">
                 <Button asChild>

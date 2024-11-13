@@ -2,6 +2,7 @@
 
 import { z } from 'zod'
 import nodemailer from 'nodemailer'
+import { env } from 'process'
 
 const schema = z.object({
   name: z.string().min(1, { message: "Name is required" }),
@@ -9,19 +10,16 @@ const schema = z.object({
   message: z.string().min(10, { message: "Message must be at least 10 characters long" }),
 })
 
-// Create a transporter using SMTP
+// Create a transporter using Gmail SMTP
 const transporter = nodemailer.createTransport({
-  host: "smtp.mailersend.net", // SMTP server
-  port: 587,
-  secure: false, // Use TLS
+  service: 'gmail',
   auth: {
-    user: "MS_muKC6T@trial-vywj2lpmzypl7oqz.mlsender.net", 
-    pass: "vsHlGLuksBrhZn1n" 
+    user: env.MY_EMAIL, // Your Gmail address
+    pass: env.MY_PASSWORD, // Your app-specific password
   },
 })
 
-export async function sendEmail(prevState: any,formData: FormData) {
-
+export async function sendEmail(prevState: any, formData: FormData) {
   const validatedFields = schema.safeParse({
     name: formData.get('name'),
     email: formData.get('email'),
@@ -37,8 +35,8 @@ export async function sendEmail(prevState: any,formData: FormData) {
   try {
     // Send email
     await transporter.sendMail({
-      from: '"Your Website" <your-email@example.com>', // sender address
-      to: "andreferraria20@gmail.com", // your personal email where you want to receive messages
+      from: process.env.MY_EMAIL, // sender address (your Gmail)
+      to: process.env.MY_EMAIL, // your personal email where you want to receive messages
       replyTo: email, // set reply-to as the sender's email
       subject: `New message from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,

@@ -15,9 +15,10 @@ export function Education() {
 
   return (
     <div className="w-full items-center flex flex-col">
-      <h2 className="text-2xl font-semibold mb-4">Education</h2>
-      <p className="text-sm text-muted-foreground mb-8 md:text-lg text-center">My education path with my formal education, certificates and readings:</p>
+     
+      <p className="text-sm text-muted-foreground mb-8 md:text-lg text-center">Here's a brief overview of my educational background and professional experience:</p>
       <Timeline data={data} title="" className="" />
     </div>
   );
 }
+/* <h2 className="text-2xl font-semibold mb-4">Education</h2>*/
