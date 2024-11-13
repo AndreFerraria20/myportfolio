@@ -1,11 +1,8 @@
 "use client";
 import {
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
-  motion,
+  motion
 } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { useMediaQuery } from "@/app/hooks/useMediaQuery";
 import { Separator } from "@radix-ui/react-separator";

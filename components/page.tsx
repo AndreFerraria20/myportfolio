@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
-import { Mail, Github, Linkedin, FileText } from "lucide-react"
+import { Mail,  FileText } from "lucide-react"
 import { ShootingStars } from "./ui/shooting-stars"
 import { StarsBackground } from "./ui/stars-background"
 import { FlipWords } from "./ui/flip-words"

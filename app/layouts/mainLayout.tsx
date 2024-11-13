@@ -6,8 +6,6 @@ import { motion } from 'framer-motion';
 import { StarsBackground } from '@/components/ui/stars-background';
 import { ShootingStars } from '@/components/ui/shooting-stars';
 import Banner from '@/components/ui/banner';
-import { b } from 'framer-motion/client';
-import { VerticalTextSidebarComponent } from '@/components/vertical-text-sidebar';
 import { ResponsiveSidebar } from '@/components/components-vertical-sidebar';
 import Footer from '@/components/ui/footer';
 
@@ -17,12 +15,12 @@ import Footer from '@/components/ui/footer';
 interface MainLayoutProps {
     title: string;
     divContent: ReactNode;
-    darkBg?: Boolean
+    darkBg?: boolean
 }
 
 const MainLayout: React.FC<MainLayoutProps> = ({ title, divContent, darkBg }) => {
 
-    let bg = darkBg ? "" : "bg-primary "
+    const bg = darkBg ? "" : "bg-primary "
 
     const slideDownVariants = {
         hidden: { y: -1000, opacity: 1 },

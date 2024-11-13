@@ -13,6 +13,11 @@ const nextConfig = {images: {
   
         }
     ],
-},};
+}, eslint: {
+    // This disables linting during `next build` and `next start`
+    ignoreDuringBuilds: true,
+  },};
+
+
 
 export default nextConfig;

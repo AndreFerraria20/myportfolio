@@ -13,13 +13,9 @@ import MainLayout from '../layouts/mainLayout'
 
  function MyContact() {
   const [state, formAction] = useFormState(sendEmail, null)
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitting] = useState(false)
 
-  const handleSubmit = async (formData: FormData) => {
-    setIsSubmitting(true)
-    await formAction(formData)
-    setIsSubmitting(false)
-  }
+
 
   const content = (
     <div className="max-w-4xl mx-auto p-4 space-y-8">
